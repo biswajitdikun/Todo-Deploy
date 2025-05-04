@@ -3,11 +3,11 @@
 A full-stack Todo List application built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring user authentication, task management, and a modern Material-UI interface.
 
 ## Live Application
-🚀 **[Access the Todo App Here](https://todo-sage-tau.vercel.app)**
+🚀 **[Access the Todo App](https://todo-frontend.ashysea-f735d8f2.eastus.azurecontainerapps.io/)**
 
-### Development URLs
-- Frontend: https://todo-sage-tau.vercel.app
-- Backend API: https://todo-m8gg.onrender.com
+### Deployment URLs
+- Frontend: https://todo-frontend.ashysea-f735d8f2.eastus.azurecontainerapps.io/
+- Backend API: https://todo-backend.ashysea-f735d8f2.eastus.azurecontainerapps.io/
 
 ## Features
 
@@ -46,6 +46,11 @@ A full-stack Todo List application built with the MERN stack (MongoDB, Express.j
 - bcryptjs for password hashing
 - Jest and Supertest for testing
 
+### Deployment
+- Docker for containerization
+- Azure Container Apps for hosting
+- Azure Container Registry for image storage
+
 ## Project Structure
 
 ```
@@ -77,6 +82,7 @@ Before you begin, ensure you have installed:
 - Node.js (v14 or higher)
 - MongoDB (v4.4 or higher)
 - npm (v6 or higher)
+- Docker (for containerized deployment)
 
 ## Installation
 
@@ -121,6 +127,8 @@ const config = {
 
 ## Running the Application
 
+### Local Development
+
 1. Start MongoDB:
    ```bash
    # macOS (using Homebrew)
@@ -146,12 +154,32 @@ The application will be available at:
 - Frontend: http://localhost:3000
 - Backend: http://localhost:5001
 
+### Docker Deployment
+
+1. Run the application using Docker Compose:
+   ```bash
+   docker-compose up -d
+   ```
+
+   This will start both the frontend and backend services in containers.
+
+2. The application will be available at:
+   - Frontend: http://localhost:80
+   - Backend: http://localhost:5001
+
+## Deployment
+
+This application is deployed using Docker containers on Azure Container Apps. For detailed deployment instructions, please refer to:
+
+- [Docker Deployment Guide](./DOCKER.md)
+- [Azure Deployment Guide](./AZURE-DEPLOYMENT.md)
+
 ## API Documentation
 
 The API is documented using Swagger/OpenAPI. You can access the documentation at:
 
 - Local Development: http://localhost:5001/api-docs
-- Production: https://todo-m8gg.onrender.com/api-docs
+- Production: https://todo-backend.ashysea-f735d8f2.eastus.azurecontainerapps.io/api-docs
 
 ### Using the API Documentation
 
